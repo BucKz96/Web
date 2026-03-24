@@ -92,3 +92,29 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+.shortcut {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shortcut-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #e8eaed;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #202124;
+  margin-bottom: 12px;
+}
+
+.shortcut p {
+  margin: 0;
+  font-size: 14px;
+  color: #202124;
+}
