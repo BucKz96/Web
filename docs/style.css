@@ -29,12 +29,25 @@ main {
   margin-bottom: 30px;
 }
 
-.search-bar input {
+.search-bar {
   width: 500px;
-  padding: 12px 20px;
+  height: 44px;
   border: 1px solid #dcdcdc;
   border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
   font-size: 16px;
+  margin: 0 12px;
+  background: transparent;
 }
 
 .top-nav {
@@ -70,3 +83,12 @@ main {
   font-size: 14px;
   color: #444
  }
+
+.search-icon,
+.mic-icon {
+  font-size: 18px;
+  color: #9aa0a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
