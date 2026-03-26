@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.banner {
+  background-color: #2ecc71;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  text-align: center;
+  position:sticky;
+  top: 0;
+}
+
+.main-content {
+  padding: 2rem;
+  height: 150vh;
+}
+
+/* À compléter */

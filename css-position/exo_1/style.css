@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  min-height: 200vh;
+  margin: 0;
+  padding: 0;
+}
+
+.back-to-top {
+  background-color: #e67e22;
+  color: white;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* À compléter */
