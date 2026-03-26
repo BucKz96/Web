@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atelier Grid vs Flexbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Section 1 : Navigation principale -->
+      <section class="section-navbar">
+         <h1>Navigation principale</h1>
+
+        <nav class="navbar">
+          <div class="left">
+            <div class="logo">TechPro</div>
+
+            <ul class="nav-links">
+              <li><a href="#" class="active">Accueil</a></li>
+              <li><a href="#">Produits</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="right">
+            <div class="nav-actions">
+              <a href="#" class="login">Se connecter</a>
+              <a href="#" class="signup">S'inscrire</a>
+            </div>
+          </div>
+        </nav>
+
+        <p class="justification">
+          <span>Justification :</span> J'utilise Flex pour la barre de navigation car une seule ligne horizontale a gérer.
+        </p>
+      </section>
+
+      <!-- Section 2 : Nos formations populaires -->
+      <section class="section-formations">
+          <h1>Nos formations populaires</h1>
+          <div class="formations">
+            <div class="formation-card">
+              <img src="./img/js.png" alt="JavaScript" />
+              <div class="tags">
+                <span class="tag">Développement</span>
+                <span class="time">12h de cours</span>
+              </div>
+              <h2>JavaScript Moderne</h2>
+              <p>Maîtrisez ES6+, async/await et les frameworks modernes</p>
+              <div class="price">
+                <span>299€</span>
+                <span class="signup">S'inscrire</span>
+              </div>
+            </div>
+            <div class="formation-card">
+              <img src="./img/react.png" alt="React" />
+              <div class="tags">
+                <span class="tag">Framework</span>
+                <span class="time">15h de cours</span>
+              </div>
+              <h2>React Avancé</h2>
+              <p>Créez des applications web performantes avec React</p>
+              <div class="price">
+                <span>399€</span>
+                <span class="signup">S'inscrire</span>
+              </div>
+            </div>
+            <div class="formation-card">
+              <img src="./img/node.png" alt="Node.js" />
+              <div class="tags">
+                <span class="tag">Backend</span>
+                <span class="time">18h de cours</span>
+              </div>
+              <h2>Node.js & Express</h2>
+              <p>Développez des API REST et applications serveur</p>
+              <div class="price">
+                <span>449€</span>
+                <span class="signup">S'inscrire</span>
+              </div>
+            </div>
+          </div>
+  
+        <p class="justification">
+          <span>Justification :</span> J'utilise Grid pour les cartes de formations et flex pour quelques elements dans les cartes.
+        </p>
+      </section>
+      <section class="articles-news">
+        <h1>Article à la une</h1>
+        <div class="news">
+            <img src="./img/ia.png" alt="AI" />
+          <div class="content-news">
+            <div class="tags">
+                <span class="tag">Technologies</span>
+                <span class="time">10mn de lecture</span>
+            </div>
+            <h2>L'Impact de l'IA sur le Développement Web en 2024</h2>
+            <p>L'intelligence artificielle révolutionne la façon dont nous concevons et développons des applications web. Découvrez les dernières innovations et leur impact sur l'industrie du développement...</p>
+            <div class="author">
+              <img src="./img/profil.png" alt="profil">
+              <div class="author-column">
+                <span class="author-name">Marie Laurent</span>
+                <span class="workname">Lead Developer @ TechPro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="justification">
+            <span>Justification :</span> J'utilise Grid pour la section article à la une car il y a plusieurs éléments à organiser de manière structurée.   
+        </p>
+      </section>
+      <!-- .... -->
+    </main>
+  </body>
+</html>
