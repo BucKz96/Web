@@ -1,0 +1,169 @@
+<html>
+  <head>
+    <title>Intelly</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <div class="header-logo">
+            <img src="./img/logotype.png" alt="Intelly">
+        </div>
+
+        <div class="header-main">
+            <div class="searchbar">
+                <input type="text" placeholder="Search">
+                <img src="./img/icons/search.png" alt="Rechercher">
+            </div>
+
+            <div class="right-header">
+                <div class="burger">
+                    <img src="./img/icons/burger.png" alt="Menu">
+                    <span>Delicious Burger</span>
+                    <img src="./img/icons/down.png" alt="Ouvrir le menu">
+                </div>
+
+                <div class="bell">
+                    <img src="./img/icons/notif.png" alt="Notifications">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <nav>
+                <p class="sidebar-title">MENU</p>
+                <a href="#" class="menu-item active">
+                    <img src="./img/icons/dashboard.png" alt="Dashboard">
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/order.png" alt="Order">
+                    <span>Order</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/report.png" alt="Report">
+                    <span>Report</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/track.png" alt="Track">
+                    <span>Track</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/maintenance.png" alt="Maintainance">
+                    <span>Maintainance</span>
+                </a>
+
+                <p class="sidebar-title">SYSTEM</p>
+
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/folder.png" alt="Master Data">
+                    <span>Master Data</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/user.png" alt="User">
+                    <span>User</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <img src="./img/icons/role.png" alt="Role">
+                    <span>Role</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">Dashboard</h1>
+
+            <section class="stats-row">
+                <article class="stat-card">
+                    <div class="stat-icon">
+                        <img src="./img/icons/primary.png" alt="Orders">
+                    </div>
+                    <div class="stat-text">
+                        <div class="stat-top">
+                            <span class="stat-number">2.409</span>
+                            <span class="stat-trend">↑ 2.1%</span>
+                        </div>
+                        <p class="stat-label">Jumlah Pemesan</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon green">
+                        <img src="./img/icons/primary.png" alt="Completed">
+                    </div>
+                    <div class="stat-text">
+                        <div class="stat-top">
+                            <span class="stat-number">68,9%</span>
+                        </div>
+                        <p class="stat-label">Pesanan Selesai</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon purple">
+                        <img src="./img/icons/primary.png" alt="KPI">
+                    </div>
+                    <div class="stat-text">
+                        <div class="stat-top">
+                            <span class="stat-number">68,9%</span>
+                        </div>
+                        <p class="stat-label">KPI Driver</p>
+                    </div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon red">
+                        <img src="./img/icons/primary.png" alt="Customer">
+                    </div>
+                    <div class="stat-text">
+                        <div class="stat-top">
+                            <span class="stat-number">3.509</span>
+                        </div>
+                        <p class="stat-label">Total Customer</p>
+                    </div>
+                </article>
+            </section>
+
+            <section class="dashboard-panel">
+                <div class="chart-section">
+                    <div class="panel-header">
+                        <h2>Statistik Pemesanan</h2>
+                        <button class="date-filter">18/12/2021</button>
+                    </div>
+
+                    <div class="chart-placeholder">
+                        graphique
+                    </div>
+                </div>
+
+                <div class="customer-section">
+                    <div class="panel-header-customer">
+                        <h2>Customer Pemesan Terbanyak</h2>
+                    </div>
+
+                    <div class="customer-list">
+                        <div class="customer-item">
+                            <span>PT Javan Cipta Solusi</span>
+                            <span>450</span>
+                        </div>
+                        <div class="customer-item">
+                            <span>CV ABCD</span>
+                            <span>449</span>
+                        </div>
+                        <div class="customer-item">
+                            <span>CV OQURY TRESNA ANJANI</span>
+                            <span>443</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+  </body>
+</html>
