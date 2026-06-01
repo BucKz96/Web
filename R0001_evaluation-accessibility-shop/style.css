@@ -1,0 +1,400 @@
+/***************************************
+ * FONTS
+ ***************************************/
+/* Chargement de la police OpenDyslexic */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("assets/fonts/OpenDyslexic-Regular.otf") format("opentype"),
+    url("assets/fonts/OpenDyslexic-Bold.otf") format("opentype"),
+    url("assets/fonts/OpenDyslexic-Italic.otf") format("opentype"),
+    url("assets/fonts/OpenDyslexic-BoldItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/***************************************
+ * VARIABLES & CONFIGURATION DE BASE
+ ***************************************/
+/* Taille de base pour les REM */
+html {
+  font-size: 16px; /* Taille de base pour le calcul des REM */
+}
+
+/* Styles de base */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/***************************************
+ * THÈMES
+ ***************************************/
+/* Mode sombre */
+body.dark {
+  background-color: #111;
+  color: #f5f5f5;
+}
+body.dark header,
+body.dark .cart-sidebar,
+body.dark .accessibility-panel,
+body.dark .modal-content {
+  background-color: #1c1c1c;
+  border-color: #444;
+}
+body.dark .product-card {
+  background-color: #222;
+}
+body.dark .categories button {
+  background-color: #333;
+  color: #eee;
+}
+body.dark .categories .active {
+  background-color: #5d3bee;
+  color: #fff;
+}
+body.dark .add-to-cart,
+body.dark .cart-button,
+body.dark .accessibility-toggle {
+  background-color: #5d3bee;
+}
+body.dark .cart-items li {
+  background-color: #333;
+}
+body.dark .access-btn.active {
+  background-color: #5d3bee;
+  color: white;
+}
+
+/* Police dyslexie */
+body.dyslexia * {
+  font-family: "OpenDyslexic", sans-serif !important;
+}
+
+/***************************************
+ * HEADER & NAVIGATION
+ ***************************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 113px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.cart-button {
+  background-color: #5d3bee;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+  background-color: #4a32cb;
+}
+
+/***************************************
+ * FILTRES & CATÉGORIES
+ ***************************************/
+.categories {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  margin-top: 120px;
+}
+
+.categories button {
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.categories .active {
+  background-color: #5d3bee;
+  color: white;
+}
+
+/***************************************
+ * GRILLE DE PRODUITS
+ ***************************************/
+.shop {
+  padding: 16px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+/* Carte produit */
+.product-card {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Image produit */
+.img-placeholder {
+  width: 100%;
+  height: 200px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* 24px -> 1.5rem */
+  color: #999;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Informations produit */
+.product-info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-info h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.125rem; /* 18px -> 1.125rem */
+}
+
+.product-info span {
+  font-size: 0.75rem; /* 12px -> 0.75rem */
+  color: #666;
+}
+
+.product-info p {
+  font-weight: bold;
+}
+
+/* Bouton d'ajout au panier */
+.add-to-cart {
+  background-color: #5d3bee;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/***************************************
+ * PANIER
+ ***************************************/
+.cart-sidebar {
+  position: fixed;
+  top: 113px;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.cart-sidebar.active {
+  transform: translateX(0);
+}
+
+.cart-panel h2 {
+  margin-top: 0;
+  font-size: 1.25rem; /* 20px -> 1.25rem */
+  margin-bottom: 16px;
+}
+
+/* Liste des articles */
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.cart-items li {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.875rem; /* 14px -> 0.875rem */
+  background-color: #fff;
+}
+
+/* Message panier vide */
+.cart-items .empty-cart {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px 0;
+  background: none;
+  margin: 0;
+}
+
+body.dark .cart-items .empty-cart {
+  color: #999;
+}
+
+/* Bouton de suppression */
+.remove-btn {
+  background: none;
+  color: #ff4444;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem; /* 14px -> 0.875rem */
+  margin-top: 4px;
+}
+
+/* Total du panier */
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+/***************************************
+ * MODALE
+ ***************************************/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem; /* 24px -> 1.5rem */
+  cursor: pointer;
+  color: #666;
+}
+
+.modal .price {
+  font-size: 1.5rem; /* 24px -> 1.5rem */
+  font-weight: bold;
+  color: #5d3bee;
+}
+
+.modal-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  margin-top: 20px;
+}
+
+body.dark .modal-image {
+  filter: brightness(0.9);
+}
+
+/***************************************
+ * MODULE D'ACCESSIBILITÉ
+ ***************************************/
+
+.accessibility-module {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.accessibility-toggle {
+  background-color: #5d3bee;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.accessibility-panel {
+  position: absolute;
+  right: 0;
+  bottom: 48px;
+  width: 240px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.accessibility-panel[hidden] {
+  display: none;
+}
+
+.accessibility-panel h2 {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+}
+
+.close-accessibility {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.accessibility-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.access-btn {
+  background-color: #5d3bee;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}

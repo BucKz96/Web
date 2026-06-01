@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniShop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>MiniShop</h1>
+      <button class="cart-button">Panier (0)</button>
+    </header>
+
+    <nav class="categories">
+      <button class="active" data-category="all">Tous</button>
+      <button data-category="audio">Audio</button>
+      <button data-category="périphériques">Périphériques</button>
+      <button data-category="écrans">Écrans</button>
+    </nav>
+
+    <main class="shop">
+      <section class="product-list">
+        <!-- Les articles sont générés dynamiquement en JavaScript -->
+      </section>
+    </main>
+
+    <aside class="cart-sidebar">
+      <div class="cart-panel">
+        <h2>Panier</h2>
+        <ul class="cart-items">
+          <!-- Le contenu sera généré dynamiquement -->
+        </ul>
+        <div class="cart-total">Total: <span>0.00 €</span></div>
+      </div>
+    </aside>
+
+    <section class="accessibility-module">
+      <button class="accessibility-toggle" id="toggle-accessibility">
+        Accessibilité
+      </button>
+      <div class="accessibility-panel" hidden>
+        <button class="close-accessibility" id="close-accessibility">
+          &times;
+        </button>
+        <h2>Accessibilité</h2>
+        <div class="accessibility-options">
+          <button class="access-btn" id="decrease-font">A-</button>
+          <button class="access-btn" id="increase-font">A+</button>
+          <button class="access-btn" id="toggle-dark">Mode sombre</button>
+          <button class="access-btn" id="toggle-dyslexia">Dyslexie</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
