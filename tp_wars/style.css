@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #f5f7fb;
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 68px;
+  padding: 0 32px;
+  background: #030303;
+}
+
+.brand {
+  margin-right: 56px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  color: #fff;
+}
+
+.main-nav .active,
+.main-nav a:hover {
+  color: #6ea7cf;
+}
+
+.sidebar {
+  position: fixed;
+  top: 68px;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 104px;
+  padding-top: 28px;
+  border-right: 3px solid #fff;
+  background: #000;
+}
+
+.sidebar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sidebar i {
+  font-size: 2.9rem;
+  line-height: 1;
+}
+
+.sidebar span {
+  font-size: 0.9rem;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 108px 42px 60px 144px;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #fff;
+  background-position: center;
+  background-size: cover;
+}
+
+.panel::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+}
+
+.panel-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  min-height: 200px;
+  padding: 30px 22px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(15, 32, 0, 0.45)),
+    url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1800&q=80");
+}
+
+h1,
+h2 {
+  margin: 0 0 22px;
+  color: #6ea7cf;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+}
+
+p {
+  max-width: 920px;
+  margin: 0 0 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+p strong {
+  color: #6ea7cf;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 2px solid #fff;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.stats {
+  min-height: 390px;
+  margin-top: 122px;
+  padding: 30px 22px 26px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=80");
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 44px;
+  margin-top: 70px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 18px;
+}
+
+.stat i {
+  flex: 0 0 auto;
+  color: #6ea7cf;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.stat h3 {
+  margin: 0 0 8px;
+  color: #6ea7cf;
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.stat strong {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.mission-button {
+  float: right;
+  margin-top: 78px;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    height: auto;
+    min-height: 68px;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 16px 22px;
+  }
+
+  .brand {
+    margin-right: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+  }
+
+  .main-nav {
+    gap: 18px;
+    font-size: 0.85rem;
+  }
+
+  .sidebar {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 78px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 2px solid #fff;
+    border-right: 0;
+  }
+
+  .sidebar a {
+    margin: 0;
+    gap: 4px;
+  }
+
+  .sidebar i {
+    font-size: 1.9rem;
+  }
+
+  .sidebar span {
+    font-size: 0.75rem;
+  }
+
+  .page {
+    padding: 118px 18px 104px;
+  }
+
+  .stats {
+    margin-top: 48px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 42px;
+  }
+
+  .mission-button {
+    float: none;
+    width: 100%;
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .hero,
+  .stats {
+    padding: 24px 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
