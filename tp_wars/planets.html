@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX - Planetes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Accueil SpaceX">SpaceX</a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="#">Prochaine mission</a>
+      </nav>
+    </header>
+
+    <aside class="sidebar" aria-label="Navigation secondaire">
+      <a class="active" href="planets.html" aria-current="page">
+        <i class="bi bi-globe-americas"></i>
+        <span>Planetes</span>
+      </a>
+
+      <a href="#">
+        <i class="bi bi-rocket-takeoff-fill"></i>
+        <span>Vehicules</span>
+      </a>
+
+      <a href="#">
+        <i class="bi bi-people-fill"></i>
+        <span>Personnes</span>
+      </a>
+    </aside>
+
+    <main class="page planets-page">
+      <section class="planet-list panel">
+        <div class="panel-content">
+          <div class="section-title">
+            <i class="bi bi-globe-americas"></i>
+            <h1>Planetes</h1>
+          </div>
+
+          <div class="table-wrap" aria-label="Liste des planetes">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Terrain</th>
+                  <th>Population</th>
+                </tr>
+              </thead>
+
+              <tbody id="planets-list">
+              </tbody>
+            </table>
+          </div>
+
+          <p class="result-count"><span id="planets-total">--</span> resultat(s)</p>
+        </div>
+      </section>
+
+      <section class="selection-panel">
+        <p>Selectionner le contenu a afficher !</p>
+      </section>
+    </main>
+
+    <script src="planets.js"></script>
+  </body>
+</html>
