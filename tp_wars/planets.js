@@ -6,6 +6,8 @@ const detail_diameter = document.getElementById('detail-diameter')
 const detail_climate = document.getElementById('detail-climate');
 const detail_gravity = document.getElementById('detail-gravity')
 const detail_terrain = document.getElementById('detail-terrain')
+const population_filter = document.getElementById('population-filter')
+let allPlanetsData = null;
 
 
 const planets_url = "https://swapi.dev/api/planets/";
@@ -49,6 +51,7 @@ const getPlanetsList = (data) => {
 
 const getPlanetsData = async () => {
     const data = await getAllPlanets(planets_url);
+    allPlanetsData = data;
     getPlanetsCount(data);
     getPlanetsList(data);
 };
@@ -67,5 +70,41 @@ const displayPlanetDetails = (planet_details) => {
   detail_gravity.textContent = planet_details.gravity;
   detail_terrain.textContent = planet_details.terrain;
 };
+
+const filterPlanetsByPopulation = (filter_value) => {
+  if (filter_value === "0") {
+    return allPlanetsData;
+  }
+  const filteredPlanets = allPlanetsData.results.filter((planet) => {
+    const population = Number(planet.population);
+    if (Number.isNaN(population)) {
+      return false;
+    }
+    if (filter_value === "1") {
+      return population < 100000;
+    }
+    if (filter_value === "2") {
+      return population >= 100000 && population <= 100000000;
+    }
+    if (filter_value === "3") {
+      return population > 100000000;
+    }
+    return true;
+  });
+
+  return {
+    count: filteredPlanets.length,
+    results: filteredPlanets,
+  };
+};
+
+population_filter.addEventListener('change', (event) => {
+  if (allPlanetsData === null) {
+    return;
+  }
+  const filteredData = filterPlanetsByPopulation(event.target.value);
+  getPlanetsCount(filteredData);
+  getPlanetsList(filteredData);
+});
 
 getPlanetsData();

@@ -45,6 +45,16 @@
             <h1>Planetes</h1>
           </div>
 
+          <div class="filters-bar">
+            <label class="visually-hidden" for="population-filter">Filtrer par population</label>
+            <select class="filter-select" id="population-filter" name="population-filter">
+              <option value="0">Par population</option>
+              <option value="1">0 a 100.000</option>
+              <option value="2">100.000 a 100.000.000</option>
+              <option value="3">+100.000.000</option>
+            </select>
+          </div>
+
           <div class="table-wrap" aria-label="Liste des planetes">
             <table class="data-table">
               <thead>

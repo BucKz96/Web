@@ -248,6 +248,43 @@ p strong {
   color: #fff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.filters-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.filter-select {
+  min-width: 164px;
+  height: 34px;
+  padding: 0 34px 0 14px;
+  border: 2px solid #fff;
+  border-radius: 0;
+  background:
+    linear-gradient(45deg, transparent 50%, #fff 50%) right 14px center / 8px 8px no-repeat,
+    #000;
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  appearance: none;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: 2px solid #6ea7cf;
+  outline-offset: 2px;
+}
+
 .table-wrap {
   max-height: 440px;
   overflow: auto;
