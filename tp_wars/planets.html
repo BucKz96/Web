@@ -64,8 +64,50 @@
         </div>
       </section>
 
-      <section class="selection-panel">
-        <p>Selectionner le contenu a afficher !</p>
+      <section class="details-panel" aria-label="Details de la planete selectionnee">
+        <div class="details-header">
+          <h2 id="detail-name">Selectionner une planete</h2>
+          <p>
+            Population :
+            <strong id="detail-population">--</strong>
+          </p>
+        </div>
+
+        <div class="details-grid">
+          <article class="detail-item">
+            <i class="bi bi-circle"></i>
+            <div>
+              <h3>Diametre</h3>
+              <p id="detail-diameter">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-thermometer-half"></i>
+            <div>
+              <h3>Climat</h3>
+              <p id="detail-climate">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-magnet-fill"></i>
+            <div>
+              <h3>Gravite</h3>
+              <p id="detail-gravity">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-tree-fill"></i>
+            <div>
+              <h3>Terrain</h3>
+              <p id="detail-terrain">--</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="button details-button" id="detail-link" href="#">En savoir plus</a>
       </section>
     </main>
 

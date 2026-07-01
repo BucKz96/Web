@@ -82,6 +82,11 @@ a {
   text-transform: uppercase;
 }
 
+.sidebar a.active,
+.sidebar a:hover {
+  background: #6ea7cf;
+}
+
 .sidebar i {
   font-size: 2.9rem;
   line-height: 1;
@@ -211,6 +216,156 @@ p strong {
   margin-top: 78px;
 }
 
+.planets-page {
+  display: grid;
+  grid-template-columns: minmax(430px, 620px) 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.planet-list {
+  min-height: 650px;
+  padding: 28px 22px 24px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.72)),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1200&q=80");
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.section-title i {
+  color: #6ea7cf;
+  font-size: 2.5rem;
+}
+
+.section-title h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.table-wrap {
+  max-height: 440px;
+  overflow: auto;
+  border-top: 0;
+}
+
+.table-wrap::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table-wrap::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.table-wrap::-webkit-scrollbar-thumb {
+  background: #6ea7cf;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.data-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #6ea7cf;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  text-align: right;
+}
+
+.data-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.data-table tbody tr:hover {
+  background: rgba(110, 167, 207, 0.22);
+}
+
+.result-count {
+  margin: 28px 0 0;
+  font-style: italic;
+}
+
+.details-panel {
+  min-height: 398px;
+  padding: 30px 22px 26px;
+  border: 2px solid #fff;
+  background: #000;
+}
+
+.details-header h2 {
+  margin: 0 0 22px;
+  color: #6ea7cf;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+}
+
+.details-header p {
+  margin: 0;
+  font-style: italic;
+}
+
+.details-header strong {
+  color: #fff;
+  font-style: normal;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 40px 72px;
+  margin-top: 54px;
+}
+
+.detail-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.detail-item i {
+  color: #6ea7cf;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.detail-item h3 {
+  margin: 0 0 8px;
+  color: #6ea7cf;
+  font-size: 1rem;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.details-button {
+  float: right;
+  margin-top: 48px;
+}
+
 @media (max-width: 900px) {
   .topbar {
     height: auto;
@@ -276,6 +431,26 @@ p strong {
     width: 100%;
     margin-top: 42px;
   }
+
+  .planets-page {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .planet-list {
+    min-height: auto;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 36px;
+  }
+
+  .details-button {
+    float: none;
+    width: 100%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -290,5 +465,13 @@ p strong {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    gap: 12px;
+  }
+
+  .data-table {
+    min-width: 620px;
   }
 }
