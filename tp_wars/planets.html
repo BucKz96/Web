@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX - Planetes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Accueil SpaceX">SpaceX</a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="#">Prochaine mission</a>
+      </nav>
+    </header>
+
+    <aside class="sidebar" aria-label="Navigation secondaire">
+      <a class="active" href="planets.html" aria-current="page">
+        <i class="bi bi-globe-americas"></i>
+        <span>Planetes</span>
+      </a>
+
+      <a href="#">
+        <i class="bi bi-rocket-takeoff-fill"></i>
+        <span>Vehicules</span>
+      </a>
+
+      <a href="#">
+        <i class="bi bi-people-fill"></i>
+        <span>Personnes</span>
+      </a>
+    </aside>
+
+    <main class="page planets-page">
+      <section class="planet-list panel">
+        <div class="panel-content">
+          <div class="section-title">
+            <i class="bi bi-globe-americas"></i>
+            <h1>Planetes</h1>
+          </div>
+
+          <div class="filters-bar">
+            <label class="visually-hidden" for="population-filter">Filtrer par population</label>
+            <select class="filter-select" id="population-filter" name="population-filter">
+              <option value="0">Par population</option>
+              <option value="1">0 a 100.000</option>
+              <option value="2">100.000 a 100.000.000</option>
+              <option value="3">+100.000.000</option>
+            </select>
+          </div>
+
+          <div class="table-wrap" aria-label="Liste des planetes">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>Terrain</th>
+                  <th>Population</th>
+                </tr>
+              </thead>
+
+              <tbody id="planets-list">
+              </tbody>
+            </table>
+          </div>
+
+          <p class="result-count"><span id="planets-total">--</span> resultat(s)</p>
+        </div>
+      </section>
+
+      <section class="details-panel" aria-label="Details de la planete selectionnee">
+        <div class="details-header">
+          <h2 id="detail-name">Selectionner une planete</h2>
+          <p>
+            Population :
+            <strong id="detail-population">--</strong>
+          </p>
+        </div>
+
+        <div class="details-grid">
+          <article class="detail-item">
+            <i class="bi bi-circle"></i>
+            <div>
+              <h3>Diametre</h3>
+              <p id="detail-diameter">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-thermometer-half"></i>
+            <div>
+              <h3>Climat</h3>
+              <p id="detail-climate">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-magnet-fill"></i>
+            <div>
+              <h3>Gravite</h3>
+              <p id="detail-gravity">--</p>
+            </div>
+          </article>
+
+          <article class="detail-item">
+            <i class="bi bi-tree-fill"></i>
+            <div>
+              <h3>Terrain</h3>
+              <p id="detail-terrain">--</p>
+            </div>
+          </article>
+        </div>
+
+        <a class="button details-button" id="detail-link" href="#">En savoir plus</a>
+      </section>
+    </main>
+
+    <script src="planets.js"></script>
+  </body>
+</html>
